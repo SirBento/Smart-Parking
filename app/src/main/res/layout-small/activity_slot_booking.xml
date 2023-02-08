@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".SlotBooking">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="Slot Booking"
+            android:textColor="@color/deeppurple"
+            android:textSize="13dp"
+            android:textStyle="italic">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/BookingDriverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Enter your name"
+        android:inputType="text"
+        android:minHeight="10dp"
+        android:textSize="13dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+    <EditText
+        android:id="@+id/BookingCarLicence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Enter Your Licence Plate Number"
+        android:inputType="text"
+        android:minHeight="10dp"
+        android:textSize="13dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+    <EditText
+        android:id="@+id/BookingCarType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Enter your Car Type"
+        android:inputType="text"
+        android:minHeight="10dp"
+        android:textSize="13dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+    <EditText
+        android:id="@+id/BookingEcoNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Enter Your Ecocash Number"
+        android:inputType="text"
+        android:minHeight="10dp"
+        android:textSize="13dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+
+    <EditText
+        android:id="@+id/BookingTimePeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Parking Time in minutes"
+        android:inputType="number"
+        android:minHeight="10dp"
+        android:textSize="13dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+
+    <Button
+        android:id="@+id/btnBookNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button"
+        android:text="Book Now"
+        android:textColor="@color/deeppurple"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        android:minHeight="5dp"/>
+
+
+</LinearLayout>
+
+</ScrollView>

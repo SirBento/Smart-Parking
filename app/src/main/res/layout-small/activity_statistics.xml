@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:padding="10dp"
+            android:text="View charts to determine peak hours of to see daily statistics "
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnViewPieChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:text="See Busy Days"
+        android:background="@drawable/button"
+        android:textSize="12sp"
+        android:textColor="@color/yello"/>
+
+    <Button
+        android:id="@+id/btnViewBarChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:text="See Busy Hours"
+        android:background="@drawable/button"
+        android:textColor="@color/yello"
+        android:textSize="13sp"
+
+        />
+
+
+
+
+</LinearLayout>

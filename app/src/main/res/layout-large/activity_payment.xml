@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".Payment"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:text="Smart Parking Payment"
+            android:textColor="@color/yello"
+            android:textSize="45dp"
+            android:textStyle="italic">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/payDriverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:hint="Enter your name"
+        android:inputType="text"
+        android:minHeight="60dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+    <EditText
+        android:id="@+id/payCarLicence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:hint="Enter Your Licence Plate Number"
+        android:inputType="text"
+        android:minHeight="60dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"/>
+
+
+    <EditText
+        android:id="@+id/payEcoNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:hint="Enter Your Ecocash Number"
+        android:inputType="text"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"
+        android:textColor="@color/black"
+        android:minHeight="60dp" />
+
+
+
+
+    <EditText
+        android:id="@+id/payTimePeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Parking Time in minutes"
+        android:inputType="number"
+        android:minHeight="60dp"
+        android:textColorHint="@color/purple_500"
+        android:fontFamily="serif"
+        android:textColor="@color/black"/>
+
+
+        <Button
+            android:id="@+id/btnPayNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button"
+            android:text="Pay Now"
+            android:gravity="center"
+            android:textColor="@color/yello"
+            android:textSize="25sp"
+            android:fontFamily="serif"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</ScrollView>
+

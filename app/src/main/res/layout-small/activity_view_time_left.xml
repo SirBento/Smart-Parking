@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewTimeLeft"
+    android:orientation="vertical"
+    android:background="@drawable/login">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="View your time left on the current ticket"
+            android:textColor="@color/deeppurple"
+            android:textSize="10sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnViewCurrentTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="View Parking Ticket"
+        android:background="@drawable/button"
+        android:textSize="9sp"
+        android:textColor="@color/yello"/>
+
+    <Button
+        android:id="@+id/btnViewBookingTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="View Booking Ticket "
+        android:background="@drawable/button"
+        android:textColor="@color/yello"
+        android:textSize="9sp"
+
+        />
+
+    </LinearLayout>
+</ScrollView>

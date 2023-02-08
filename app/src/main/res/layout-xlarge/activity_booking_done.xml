@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login"
+        android:alpha="0.5"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:background="@color/yello"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/correct"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="45sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:fontFamily="serif"
+                android:text="  Congrats your payment was successful, your slot is now booked.Thank you!!"
+                />
+
+            <Button
+                android:id="@+id/BookingDoneButton"
+                android:layout_width="400dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/btn_background"
+                android:text="Done"
+                android:fontFamily="serif"
+                android:textAllCaps="false"
+                android:textColor="@color/green"
+                android:textSize="49sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

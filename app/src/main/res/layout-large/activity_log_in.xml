@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    tools:context=".Log_In">
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="serif"
+        android:text="LOGIN"
+        android:textColor="@color/colorPrimary"
+        android:textSize="48dp" />
+
+    <EditText
+        android:id="@+id/logEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:backgroundTintMode="screen"
+        android:textColorHint="@color/purple_500"
+        android:inputType="textEmailAddress"
+        android:minHeight="50dp"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        />
+
+    <EditText
+        android:id="@+id/logPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:backgroundTintMode="screen"
+        android:textColorHint="@color/purple_500"
+        android:layout_marginTop="25dp"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+
+        />
+
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:text="Forget Password?"
+        android:textColor="#5283c0"
+        android:textSize="15dp"
+        android:fontFamily="serif"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:text="LOGIN"
+        android:background="@drawable/button"
+        android:textSize="20dp"
+        android:textColor="@color/deeppurple"
+        android:fontFamily="serif"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:text="SignUp"
+        android:background="@drawable/button"
+        android:textColor="@color/deeppurple"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+ />
+
+
+</LinearLayout>
+
+</ScrollView>

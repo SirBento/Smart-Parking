@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingDescription"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="@drawable/login" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:text="What You Are Going To Pay To Book For Parking"
+            android:textColor="@color/yello"
+            android:textSize="45sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:src="@drawable/booking" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/booknameofpayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="37sp"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/booknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:text="Ecocash Number"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="37sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/bookminutesOfParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:text="Parking Time In Minutes"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="37sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/bookamountToBePaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:text="Amount to be paid"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="37sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Note: You have to park your car within 30 minutes after reservation, failure to do so will result in the reservation being terminated and you will have to make a new reservation"
+        android:padding="5dp"
+        android:textColor="@color/lightgreen"
+        android:textColorHighlight="@color/red"
+        android:textSize="35sp"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        />
+
+        <Button
+            android:id="@+id/btnPayment"
+            android:layout_width="520dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/button"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Make Payment"
+            android:textColor="@color/yello"
+            android:textSize="47sp"
+            android:textStyle="italic" />
+
+        <Button
+        android:id="@+id/btncancel"
+        android:layout_width="520dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:background="@drawable/button"
+        android:text="Cancel"
+        android:textColor="@color/yello"
+        android:textSize="47sp"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopUpDescription"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/login">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:text="What You Are Going To Pay"
+            android:textColor="@color/yello"
+            android:textSize="25sp"
+            android:fontFamily="serif"
+            android:layout_gravity="center"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:src="@drawable/payforparking" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/TopUpNameOfPayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Name"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="serif"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/TopUpEcoNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:text="Ecocash Number"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="serif"
+            android:textSize="19sp"/>
+
+        <TextView
+            android:id="@+id/TopUpMinutesOfParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:padding="5dp"
+            android:text="Parking Time In Minutes"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="serif"
+            android:textSize="19sp" />
+
+
+        <TextView
+            android:id="@+id/TopUpAmountToBePaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:padding="5dp"
+            android:text="Amount to be paid"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="serif"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnTopUpPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="80dp"
+        android:gravity="center"
+        android:background="@drawable/button"
+        android:text="Make Payment"
+        android:textColor="@color/yello"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btTopUpncancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/button"
+        android:text="Cancel"
+        android:textColor="@color/yello"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:fontFamily="serif"
+        />
+
+
+</LinearLayout>

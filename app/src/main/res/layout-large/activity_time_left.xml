@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:padding="15dp"
+    tools:context=".MinutesAfterBooking">
+
+    <TextView
+        android:id="@+id/TicketCountDownMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="serif"
+        android:text="YOUR CURRENT TICKET"
+        android:textColor="@color/deeppurple"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/userPayName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="134dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TicketCountDownMessage"
+        app:layout_constraintVertical_bias="0.123"
+        app:srcCompat="@drawable/bookingpic" />
+
+    <TextView
+        android:id="@+id/userPayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/black"
+
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/TicketCountDownMessage" />
+
+    <TextView
+        android:id="@+id/userPayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Date"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userPayReg" />
+
+    <TextView
+        android:id="@+id/ticketMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="No active ticket yet"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/PayCountdown" />
+
+    <TextView
+        android:id="@+id/PayCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@color/red"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userPayMinutes" />
+
+    <TextView
+        android:id="@+id/userPayMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Duration"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userPayDate" />
+
+    <TextView
+        android:id="@+id/userPayReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Reg_No"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/userPayName" />
+
+    <Button
+        android:id="@+id/btnTopUp"
+        android:layout_width="161dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:text="Top Up"
+        android:textColor="@color/yello"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ticketMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

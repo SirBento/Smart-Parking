@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewTimeLeft"
+    android:orientation="vertical"
+    android:background="@drawable/login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:padding="10dp"
+            android:text="View your time left on the current ticket"
+            android:textColor="@color/deeppurple"
+            android:textSize="20dp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/deeppurple"
+            android:padding="10dp"
+            android:src="@drawable/ticket" />
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnViewCurrentTicket"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="50dp"
+        android:text="View Parking Ticket"
+        android:background="@drawable/button"
+        android:textSize="15dp"
+        android:textColor="@color/yello"/>
+
+    <Button
+        android:id="@+id/btnViewBookingTicket"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:text="View Booking Ticket "
+        android:background="@drawable/button"
+        android:textColor="@color/yello"
+        android:textSize="15dp"
+
+        />
+
+</LinearLayout>

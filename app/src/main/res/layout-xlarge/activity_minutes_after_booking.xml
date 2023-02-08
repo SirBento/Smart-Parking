@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MinutesAfterBooking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@drawable/login"
+    >
+
+    <TextView
+        android:id="@+id/bookingTicketMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:text="Booking Ticket"
+        android:textColor="@color/deeppurple"
+        android:textSize="70sp"
+        android:textStyle="italic"
+        android:fontFamily="serif"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="265dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/bookingpic"
+        />
+
+    <TextView
+        android:id="@+id/bookerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="732dp"
+        android:layout_marginTop="50dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingTicketMessage"
+        app:layout_constraintStart_toEndOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/BookingCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="00:00"
+        android:textColor="@color/red"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/minutesBooked" />
+
+    <TextView
+        android:id="@+id/minutesBooked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="Time"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/slotBooked" />
+
+    <TextView
+        android:id="@+id/slotBooked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="Slot"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/bookTime" />
+
+    <TextView
+        android:id="@+id/bookticketMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="No active ticket yet"
+        android:textColor="@color/teal_700"
+        android:textSize="45sp"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/BookingCountdown" />
+
+    <TextView
+        android:id="@+id/bookTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="Date"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/bookerName" />
+
+    <Button
+        android:id="@+id/btnParked"
+        android:layout_width="459dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="I have Parked"
+        android:textColor="@color/yello"
+        android:textSize="45sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookticketMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

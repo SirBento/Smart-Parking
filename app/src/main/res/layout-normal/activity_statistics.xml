@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:text="View charts to determine peak hours of to see daily statistics "
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:src="@drawable/stats" />
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnViewPieChart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:text="See Busy Days"
+        android:background="@drawable/button"
+        android:textSize="20sp"
+        android:textColor="@color/yello"/>
+
+    <Button
+        android:id="@+id/btnViewBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:text="See Busy Hours"
+        android:background="@drawable/button"
+        android:textColor="@color/yello"
+        android:textSize="20dp"
+
+        />
+
+
+
+
+</LinearLayout>

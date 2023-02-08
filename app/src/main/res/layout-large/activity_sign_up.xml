@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@drawable/login"
+    tools:context=".SignUp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginTop="50dp">
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textSize="35sp"
+            android:textColor="@color/deeppurple"
+            android:layout_marginTop="100dp"
+            android:fontFamily="serif"/>
+
+        <EditText
+            android:id="@+id/signup_first_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="serif"
+            android:hint="First Name"
+            android:textColorHint="@color/purple_500"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"
+            />
+
+        <EditText
+            android:id="@+id/signup_sur_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Surname"
+            android:textColorHint="@color/purple_500"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"
+            />
+
+        <EditText
+            android:id="@+id/signup_email_Add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Email"
+            android:textColorHint="@color/purple_500"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"/>
+
+        <EditText
+            android:id="@+id/signup_Pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:fontFamily="serif"
+            android:textColorHint="@color/purple_500"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"/>
+
+        <EditText
+            android:id="@+id/signup_Pass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Re-enter Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/purple_500"
+            android:fontFamily="serif"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"/>
+
+        <EditText
+            android:id="@+id/signup_Pnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Phone Number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/purple_500"
+            android:layout_marginTop="5dp"
+            android:fontFamily="serif"
+            android:minHeight="48dp"
+            android:backgroundTintMode="screen"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_marginTop="3dp"
+        android:text="User Type:"
+        android:textColor="@color/black"
+        android:textColorHint="@color/purple_500"
+        android:textSize="17sp"
+        android:fontFamily="serif"/>
+
+
+    <Spinner
+        android:id="@+id/accountType"
+        android:layout_width="251dp"
+        android:layout_height="48dp"
+        android:fontFamily="serif"
+        android:textColorHint="@color/purple_500"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>
+
+
+      <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Register"
+            android:textColor="@color/yello"
+            android:textSize="23sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"
+
+            />
+
+
+</LinearLayout>
+
+    </ScrollView>

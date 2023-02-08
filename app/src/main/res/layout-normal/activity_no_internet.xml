@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e6262"
+    android:focusable="auto"
+    android:orientation="vertical"
+    tools:context=".SplashScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/walking_for_wifi" />
+
+
+    <TextView
+        android:id="@+id/netWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lottie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:fontFamily="serif"
+        android:text="No Internet Connection!!!"
+        android:textColor="#c94e4e"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnNetRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/netWarning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button"
+        android:fontFamily="serif"
+        android:text="REFRESH"
+        android:textColor="#a7ff83"
+        android:textSize="20sp" />
+
+
+
+
+    <!--
+
+     -->
+
+</RelativeLayout>

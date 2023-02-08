@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BarChartStats"
+    android:background="@drawable/hispc6">
+
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="135dp"
+        android:layout_height="133dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/ParkingHoursBarChart">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+
+
+    <!--  <com.github.mikephil.charting.charts.BarChart
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/barchart">
+
+      </com.github.mikephil.charting.charts.BarChart>
+
+      -->
+</RelativeLayout>
