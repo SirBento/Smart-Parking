@@ -42,7 +42,7 @@
         android:id="@+id/MarshalSlotnoHistoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You haven't parked with us yet"
+        android:text="No cars parked  yet"
         android:textColor="@color/teal_700"
         android:textSize="19sp"
         android:textStyle="italic"

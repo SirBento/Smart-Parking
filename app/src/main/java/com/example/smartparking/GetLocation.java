@@ -45,6 +45,8 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
     //markers to be displayed on the map
     MarkerOptions  slot1, slot2, slot3;
 
+    Marker  slot1Maker,slot2Maker,slot3Maker;
+
     //get direction button reference
     private Button getDirection;
 
@@ -199,7 +201,12 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
         if (!slot1Book.equals("Booked") && !slot1_Occ.equals("0")) {
 
             //Display slot 1  marker on the map
-            mMap.addMarker(slot1).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar)));
+
+            slot1Maker = mMap.addMarker(slot1);
+            slot1Maker.setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar)));
+            //Below is the one that worked
+            //
+            // mMap.addMarker(slot1).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar)));
             //
             // create a marker object to use the below functions
 
@@ -214,6 +221,12 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
              *                     .icon(Utils.getMarkerBitmapFromView(getActivity(), R.drawable.auto_front))
              *                     .snippet("Updated Location"));*
              * */
+        }else{
+
+            if (slot1Book.equals("Booked") || slot1_Occ.equals("1")){
+
+                slot1Maker.remove();
+            }
         }
     }
 
@@ -226,8 +239,21 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
         if (!slot2Book.equals("Booked") && !slot2_Occ.equals("0")) {
 
             //Display slot 1  marker on the map
-            mMap.addMarker(slot2).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar2)));
 
+            slot2Maker = mMap.addMarker(slot2);
+            slot2Maker.setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar2)));
+
+            //Display slot 1  marker on the map
+            //
+            //
+            // mMap.addMarker(slot2).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar2)));
+
+        }else{
+
+            if (slot2Book.equals("Booked") || slot2_Occ.equals("1")){
+
+                slot2Maker.remove();
+            }
         }
 
     }
@@ -241,8 +267,25 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
 
         if (!slot3Book.equals("Booked") && !slot3_Occ.equals("0")) {
 
+
             //Display slot 1  marker on the map
-            mMap.addMarker(slot3).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar3)));
+
+            slot3Maker = mMap.addMarker(slot3);
+            slot3Maker.setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar3)));
+
+            //Display slot 1  marker on the map
+            //
+            //
+            //
+            // mMap.addMarker(slot3).setIcon((bitmapDescriptorFromVector(GetLocation.this, R.drawable.slotcar3)));
+
+
+        }else{
+
+            if (slot3Book.equals("Booked") || slot3_Occ.equals("1")){
+
+                slot3Maker.remove();
+            }
         }
 
     }

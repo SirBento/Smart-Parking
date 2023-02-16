@@ -82,7 +82,7 @@ public class MarshalActiveTicketActivity extends AppCompatActivity {
 
                     reg_no = dataSnapshot.child("Driver").getValue(String.class);
                     date = dataSnapshot.child("Date").getValue(String.class);
-                    time = dataSnapshot.child("Time").getValue(String.class);
+                    time = dataSnapshot.child("Reg_No").getValue(String.class); //there is no time in the ticket node so i'm using reg no instead
                     duration = dataSnapshot.child("Duration").getValue(String.class);
 
 

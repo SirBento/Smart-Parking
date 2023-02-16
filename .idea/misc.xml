@@ -38,6 +38,7 @@
         <entry key="app/src/main/res/layout-large/activity_home.xml" value="0.15775972637879435" />
         <entry key="app/src/main/res/layout-large/activity_log_in.xml" value="0.15503173164097914" />
         <entry key="app/src/main/res/layout-large/activity_marshal_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-large/activity_marshal_slot_tickets.xml" value="0.1" />
         <entry key="app/src/main/res/layout-large/activity_minutes_after_booking.xml" value="0.15503173164097914" />
         <entry key="app/src/main/res/layout-large/activity_no_internet.xml" value="0.1" />
         <entry key="app/src/main/res/layout-large/activity_parking_history.xml" value="0.15775972637879435" />
@@ -95,6 +96,7 @@
         <entry key="app/src/main/res/layout-small/activity_home.xml" value="0.36863136863136864" />
         <entry key="app/src/main/res/layout-small/activity_log_in.xml" value="0.5387029288702929" />
         <entry key="app/src/main/res/layout-small/activity_marshal_home.xml" value="0.4360730593607306" />
+        <entry key="app/src/main/res/layout-small/activity_marshal_slot_tickets.xml" value="0.4360730593607306" />
         <entry key="app/src/main/res/layout-small/activity_minutes_after_booking.xml" value="0.7352941176470589" />
         <entry key="app/src/main/res/layout-small/activity_no_internet.xml" value="0.4028776978417266" />
         <entry key="app/src/main/res/layout-small/activity_parking_history.xml" value="0.5" />
@@ -119,6 +121,7 @@
         <entry key="app/src/main/res/layout-xlarge/activity_home.xml" value="0.28828125" />
         <entry key="app/src/main/res/layout-xlarge/activity_log_in.xml" value="0.28828125" />
         <entry key="app/src/main/res/layout-xlarge/activity_marshal_home.xml" value="0.1431784107946027" />
+        <entry key="app/src/main/res/layout-xlarge/activity_marshal_slot_tickets.xml" value="0.1431784107946027" />
         <entry key="app/src/main/res/layout-xlarge/activity_minutes_after_booking.xml" value="0.28828125" />
         <entry key="app/src/main/res/layout-xlarge/activity_no_internet.xml" value="0.14205397301349326" />
         <entry key="app/src/main/res/layout-xlarge/activity_parking_history.xml" value="0.28828125" />
