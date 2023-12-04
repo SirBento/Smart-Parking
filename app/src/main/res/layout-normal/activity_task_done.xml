@@ -11,8 +11,8 @@
         android:alpha="0.5"/>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_gravity="center"
@@ -22,7 +22,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/completedImage"
             android:layout_gravity="center_horizontal"/>
 
         <LinearLayout
@@ -47,7 +46,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textAlignment="center"
-                android:text="  Congrats your payment successful.Thank you!!"
+                android:text="  Congrats your payment was successful.Thank you!!"
                 android:fontFamily="serif"/>
 
             <Button

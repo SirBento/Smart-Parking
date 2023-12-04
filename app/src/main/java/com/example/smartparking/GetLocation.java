@@ -1,6 +1,7 @@
 package com.example.smartparking;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -26,6 +27,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.smartparking.databinding.ActivityGetLocationBinding;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,6 +39,7 @@ import java.util.ArrayList;
 
 public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
 
+    DatabaseReference databaseRef;
     private GoogleMap mMap;
     private ActivityGetLocationBinding binding;
     // Reference to the parking slots booking status in the database
@@ -50,6 +53,7 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
     //get direction button reference
     private Button getDirection;
 
+    static double lat_,long_;
     private LatLng user;
 
     //An instance of slot data class to set and get values from the database
@@ -59,7 +63,7 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        databaseRef = FirebaseDatabase.getInstance().getReference("GPS_data");
         binding = ActivityGetLocationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -81,6 +85,55 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
         // slot 3 coordinates
         slot3 = new MarkerOptions().position(new LatLng(-18.9779536303923, 32.67726898142822)).title("Slot 3");
 
+        databaseRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                if(snapshot.exists()){
+
+                    lat_ = (double)snapshot.child("Lat").getValue();
+
+                    long_ = (double)snapshot.child("Long").getValue();
+
+                }
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+
+                if(snapshot.exists()){
+
+                    lat_ = (double)snapshot.child("Lat").getValue();
+
+                    long_ = (double)snapshot.child("Long").getValue();
+
+                }
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                if(!snapshot.exists()){
+
+                    lat_ = 0.00000;
+
+                    long_ = 0.00000;
+
+                }
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
     }

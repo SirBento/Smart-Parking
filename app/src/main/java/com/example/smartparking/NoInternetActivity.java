@@ -42,8 +42,7 @@ public class NoInternetActivity extends AppCompatActivity {
         });
     }
 
-
-
+    //checking if the user is connected to the internet
     private boolean haveNetworkConnection() {
         boolean haveConnectedWifi = false;
         boolean haveConnectedMobile = false;

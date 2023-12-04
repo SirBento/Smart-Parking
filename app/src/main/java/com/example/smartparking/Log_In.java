@@ -204,36 +204,28 @@ public class Log_In extends AppCompatActivity {
     }
 
 
-
+    //Determine the user type during login
     private void userType(String uid){
-
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Roles").child(uid);
-
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 //store the access level of the user trying to login
                 AccessLevel = snapshot.getValue(String.class);
 
                 if( AccessLevel.equals("Marshal")){
 
-
                     Toast.makeText(Log_In.this, "Welcome Marshal....", Toast.LENGTH_LONG).show();
-
                     //if login is successful go to the Marshal's homepage
                     startActivity(new Intent( Log_In.this,MarshalHomeActivity.class) );
                     finish();
 
-
                 }else if(AccessLevel.equals("Driver")){
-
 
                     Toast.makeText(Log_In.this, "Welcome Driver....", Toast.LENGTH_LONG).show();
                     //if login is successful go to the Driver's homepage
                     startActivity(new Intent( Log_In.this,Home.class) );
                     finish();
-
                 }
 
 

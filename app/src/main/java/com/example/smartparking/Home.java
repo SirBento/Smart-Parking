@@ -281,49 +281,36 @@ public class Home extends AppCompatActivity {
 
 
 //Acquire the user's current location if the user grants access
-
     private void getCurrentLocation(){
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ActivityCompat.checkSelfPermission(Home.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
+            if (ActivityCompat.checkSelfPermission(Home.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
                 if (isGPSEnabled()) {
-
                     LocationServices.getFusedLocationProviderClient(Home.this)
                             .requestLocationUpdates(locationRequest, new LocationCallback() {
                                 @Override
                                 public void onLocationResult(@NonNull LocationResult locationResult) {
                                     super.onLocationResult(locationResult);
-
                                     LocationServices.getFusedLocationProviderClient(Home.this)
                                             .removeLocationUpdates(this);
-
                                     if (locationResult != null && locationResult.getLocations().size() >0){
 
                                         int index = locationResult.getLocations().size() - 1;
                                         double latitude = locationResult.getLocations().get(index).getLatitude();
                                         double longitude = locationResult.getLocations().get(index).getLongitude();
-
-                                       // GlobalVariables globalVariables = new GlobalVariables();
-                                       // globalVariables.lat_ = latitude;
-                                        //globalVariables.long_ = latitude;
+                                       // Saving Latitude and Longitude to global variables
                                         GlobalVariables.lat_= latitude;
                                         GlobalVariables.long_ = longitude;
-
                                         //globalVariables.setUserLocation(new MarkerOptions().position(new LatLng(latitude, longitude )).title("You Are Here")) ;
-
                                     }
                                 }
                             }, Looper.getMainLooper());
-
                 } else {
                     //turn on GPS if it is off
                     turnOnGPS();
                 }
-
             } else {
                 // request permission to use gps if the user has not used the app before or has never granted the permission
-
                 requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             }
         }

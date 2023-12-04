@@ -183,7 +183,6 @@ public class TopUpDescription extends AppCompatActivity {
                     Toast.makeText(TopUpDescription.this, "Pay now", Toast.LENGTH_LONG).show();
 
 
-
                     //delay checking the payment status by 15 seconds
                     Handler handler = new Handler();
 
@@ -226,7 +225,7 @@ public class TopUpDescription extends AppCompatActivity {
                             }
 
                         }
-                    }, 20000); // dismiss the dialog after 15 seconds
+                    }, 15000); // dismiss the dialog after 15 seconds
 
 
                 } else {
@@ -241,8 +240,8 @@ public class TopUpDescription extends AppCompatActivity {
 
                 payNowPaymentException =e.getMessage();
                 PayNowErrors();
-
                 Toast.makeText(this,"Something Wrong Happened!!!, Please Check Your Connection", Toast.LENGTH_LONG).show();
+                loadingDialog.dismissDialog();
             }
 
         }

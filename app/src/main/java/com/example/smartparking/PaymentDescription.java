@@ -162,12 +162,11 @@ public class PaymentDescription extends AppCompatActivity {
 
                              CreateCurrentTicket();
                              savePaymentdetails();
-
                              loadingDialog.dismissDialog();
 
                              Toast.makeText(PaymentDescription.this, "Thank you for paying", Toast.LENGTH_LONG).show();
 
-                             startActivity(new Intent( PaymentDescription.this, TaskDone.class) );
+                             startActivity(new Intent( PaymentDescription.this, TimeLeft.class) );
                              finish();
 
                         } else {
@@ -178,7 +177,7 @@ public class PaymentDescription extends AppCompatActivity {
                         }
 
                     }
-                }, 20000); // dismiss the dialog after 15 seconds
+                }, 15000); // dismiss the dialog after 15 seconds
 
 
             } else {
@@ -186,7 +185,6 @@ public class PaymentDescription extends AppCompatActivity {
                 paymentErrorException = response.errors().toString();
                 paymentErrors();
                 loadingDialog.dismissDialog();
-
                 Toast.makeText(PaymentDescription.this,"Failed!!, Please Check Your Connection" , Toast.LENGTH_LONG).show();
             }
 

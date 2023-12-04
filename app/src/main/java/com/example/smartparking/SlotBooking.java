@@ -87,6 +87,31 @@ public class SlotBooking extends AppCompatActivity {
         }
     }
 
+    private boolean validatePhoneNumber(){
+
+        // Get entered phone number, trim to remove extra white space
+        String paynum = BecoNumber.getText().toString().trim();
+
+        // checking if the phone number field is empty or not
+        if (paynum.isEmpty()) {
+
+            BecoNumber.setError("Ecocash Number is required");
+            BecoNumber.requestFocus();
+            return false;
+            //checking the length and validity of the phone number
+        }else if (paynum.length() > 10 || paynum.length() < 10) {
+
+            BecoNumber.setError("Enter a valid number");
+            BecoNumber.requestFocus();
+            return false ;
+
+        } else {
+            BecoNumber.setError(null);
+            return true;
+
+        }
+
+    }
     private boolean validateLicencePlate(){
 
         // Get entered plate number, trim to remove extra white space
@@ -172,31 +197,7 @@ public class SlotBooking extends AppCompatActivity {
         }
     }
 
-    private boolean validatePhoneNumber(){
 
-        // Get entered phone number, trim to remove extra white space
-        String paynum = BecoNumber.getText().toString().trim();
-
-        // checking if the phone number field is empty or not
-        if (paynum.isEmpty()) {
-
-            BecoNumber.setError("Ecocash Number is required");
-            BecoNumber.requestFocus();
-            return false;
-        //checking the length and validity of the phone number
-        }else if (paynum.length() > 10 || paynum.length() < 10) {
-
-            BecoNumber.setError("Enter a valid number");
-            BecoNumber.requestFocus();
-            return false ;
-
-        } else {
-            BecoNumber.setError(null);
-            return true;
-
-        }
-
-    }
 
     private boolean validateCarType(){
 

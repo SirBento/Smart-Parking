@@ -18,8 +18,6 @@ public class TaskDone extends AppCompatActivity {
 
         DonePayment= (Button)findViewById(R.id.BookingDoneButton);
 
-
-
         DonePayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

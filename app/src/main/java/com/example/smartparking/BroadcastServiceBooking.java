@@ -25,40 +25,31 @@ public class BroadcastServiceBooking extends Service{
     @Override
     public void onCreate() {
         super.onCreate();
-
+        //ticket countdown timer
         userTimeInSeconds = GlobalVariables.bookuserMillisec;
         if (userTimeInSeconds >1000) {
             if (!isRunning && !GlobalVariables.bookingTicketrunning) {
-
-                //start
-                countDownTimer = new CountDownTimer(userTimeInSeconds, 1000) { // adjust the milli seconds here
-
+                //start counting
+                countDownTimer = new CountDownTimer(userTimeInSeconds, 1000) {
+                    // adjust the milli seconds here
                     public void onTick(long millisUntilFinished) {
-
                         Log.i("BroadcastServiceBooking", "Seconds: " + millisUntilFinished / 1000);
                         intent.putExtra("countdown", millisUntilFinished);
                         sendBroadcast(intent);
-
                         // constantly update the global variable with the correct left time
                         GlobalVariables.bookuserMillisec = millisUntilFinished;
 
-                        Log.i("BroadcastServiceBooking", "Global Variable " + GlobalVariables.bookuserMillisec);
-
-
+                        Log.i("BroadcastServiceBooking", "Global Variable "
+                                + GlobalVariables.bookuserMillisec);
                         isRunning = true;
-
                         GlobalVariables.bookingTicketrunning = true;
                     }
-
                     public void onFinish() {
-
                         sendNotification();
                         NotifyChannelOreo();
-
                         isRunning = false;
                         GlobalVariables.bookingTicketExist = false;
                         GlobalVariables.bookingTicketrunning = true;
-
                     }
                 };
                 countDownTimer.start();
