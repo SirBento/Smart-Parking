@@ -18,7 +18,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.os.StrictMode;
-import android.provider.Settings;
 import android.view.View;
 import android.widget.Toast;
 import com.google.android.gms.common.api.ApiException;
@@ -30,8 +29,6 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,7 +37,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -107,8 +103,6 @@ public class Home extends AppCompatActivity {
         parkingHistory = (CardView) findViewById(R.id.parkingHistory);
 
 
-
-
         locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
@@ -116,7 +110,6 @@ public class Home extends AppCompatActivity {
 
         userticket();
         userBookingticket();
-
 
         paymentCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,7 +135,6 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 startActivity(new Intent( Home.this,GetLocation.class) );
-
             }
         });
         parkingSlotscard.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +142,6 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
 
                 startActivity(new Intent( Home.this,ParkingSlots.class) );
-
             }
         });
 
