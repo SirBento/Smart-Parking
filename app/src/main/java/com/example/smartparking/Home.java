@@ -110,7 +110,6 @@ public class Home extends AppCompatActivity {
 
         userticket();
         userBookingticket();
-
         paymentCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -215,7 +215,6 @@ public class TimeLeft extends AppCompatActivity {
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(TimeLeft.this);
         managerCompat.notify(1,builder.build());
 
-
     }
 
     private void NotifyChannelOreo(){

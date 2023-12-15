@@ -44,51 +44,35 @@ public class Log_In extends AppCompatActivity {
         // initializing the database authentication
         mAuth = FirebaseAuth.getInstance();
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btn_login.setOnClickListener(view -> {
 
-                log_Email = findViewById(R.id.logEmail);
-                logPass = findViewById(R.id.logPassword);
+            log_Email = findViewById(R.id.logEmail);
+            logPass = findViewById(R.id.logPassword);
 
 
-                if(!validatePassword() |  !validateEmail() ){
-                    // If the functions continue to return false repeat validation until true
-                    return;
-                }
+            if(!validatePassword() |  !validateEmail() ){
+                // If the functions continue to return false repeat validation until true
+                return;
+            }
 
-                if(!haveNetworkConnection()){
+            if(!haveNetworkConnection()){
 
-                    Toast.makeText(Log_In.this, "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
+                Toast.makeText(Log_In.this, "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
 
-                }else{
-                    loadingDialog.startLoadingDialog();
-                    userLogin();
-
-                }
+            }else{
+                loadingDialog.startLoadingDialog();
+                userLogin();
 
             }
+
         });
 
          //sign up activity calling
         Button btn_Sign_Up = findViewById(R.id.btnSignUp);
-        btn_Sign_Up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent( Log_In.this,SignUp.class) );
-            }
-        });
+        btn_Sign_Up.setOnClickListener(view -> startActivity(new Intent( Log_In.this,SignUp.class) ));
 
 
-
-        forgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent( Log_In.this,ForgotPassword.class) );
-            }
-        });
+        forgotPassword.setOnClickListener(view -> startActivity(new Intent( Log_In.this,ForgotPassword.class) ));
 
     }
 

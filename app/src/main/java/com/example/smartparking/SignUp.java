@@ -60,18 +60,15 @@ public class SignUp extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        signUp.setOnClickListener(view -> {
 
-                if(!validateSecondPassword() | !validateFirstPassword() | !validateFirstName() |  !validatePhoneNumber() | !validateSurname() | !validateEmail() ){
+            if(!validateSecondPassword() | !validateFirstPassword() | !validateFirstName() |  !validatePhoneNumber() | !validateSurname() | !validateEmail() ){
 
-                    return;
-                }
-
-                registerUser();
-
+                return;
             }
+
+            registerUser();
+
         });
 
 
@@ -102,47 +99,38 @@ public class SignUp extends AppCompatActivity {
 
         //entering data into the firebase database during signup
         mAuth.createUserWithEmailAndPassword(e_mail, pass1)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                .addOnCompleteListener(task -> {
 
-                        if (task.isSuccessful()) {  //for if the user was successfully registered
+                    if (task.isSuccessful()) {  //for if the user was successfully registered
 
-                            User user = new User(fname, sname, e_mail, pnum, pass1);
+                        User user = new User(fname, sname, e_mail, pnum, pass1);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(user).addOnCompleteListener(task1 -> {
 
-                                            if (task.isSuccessful()) {
+                                    if (task1.isSuccessful()) {
 
-                                                createUserRole();
+                                        createUserRole();
 
-                                                //checking if the account is verified , if not the user has to first verify the account before logging in
+                                        //checking if the account is verified , if not the user has to first verify the account before logging in
 
-                                                    //show a notification if the account was created successfully
-                                                    Toast.makeText(SignUp.this, "Account created successfully.Please check your email to verify then LogIn with your account", Toast.LENGTH_LONG).show();
-                                                    // Go to login page
-                                                    startActivity(new Intent(SignUp.this, Log_In.class));
-                                                    finish();
+                                            //show a notification if the account was created successfully
+                                            Toast.makeText(SignUp.this, "Account created successfully.Please check your email to verify then LogIn with your account", Toast.LENGTH_LONG).show();
+                                            // Go to login page
+                                            startActivity(new Intent(SignUp.this, Log_In.class));
+                                            finish();
 
+                                    } else {
 
+                                        //show a notification if the account failed to create an account successfully
+                                        Toast.makeText(SignUp.this, "Account creation failed. Please check your internet connection and try again!", Toast.LENGTH_LONG).show();
 
+                                    }
 
-                                            } else {
-
-                                                //show a notification if the account failed to create an account successfully
-                                                Toast.makeText(SignUp.this, "Account creation failed. Please check your internet connection and try again!", Toast.LENGTH_LONG).show();
-
-                                            }
-
-                                        }
-                                    });
+                                });
 
 
-                        }
                     }
                 });
 
