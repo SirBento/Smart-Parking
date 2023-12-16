@@ -31,15 +31,7 @@ public class ForgotPassword extends AppCompatActivity {
         btnresetPass =(Button) findViewById(R.id.btnReset);
         mAuth = FirebaseAuth.getInstance();
 
-        btnresetPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                resetPassword();
-            }
-
-
-        });
+        btnresetPass.setOnClickListener(view -> resetPassword());
 
     }
 
@@ -63,22 +55,19 @@ public class ForgotPassword extends AppCompatActivity {
             return;
         }
 
-        mAuth.sendPasswordResetEmail(e_mail).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
+        mAuth.sendPasswordResetEmail(e_mail).addOnCompleteListener(task -> {
 
-                if(task.isSuccessful()){
+            if(task.isSuccessful()){
 
-                    Toast.makeText(ForgotPassword.this, "Check your email to reset your password", Toast.LENGTH_LONG).show();
+                Toast.makeText(ForgotPassword.this, "Check your email to reset your password", Toast.LENGTH_LONG).show();
 
-                }else {
+            }else {
 
-                    Toast.makeText(ForgotPassword.this, "Failed to reset your password. PLEASE TRY AGAIN!!", Toast.LENGTH_LONG).show();
-
-                }
-
+                Toast.makeText(ForgotPassword.this, "Failed to reset your password. PLEASE TRY AGAIN!!", Toast.LENGTH_LONG).show();
 
             }
+
+
         });
     }
 }

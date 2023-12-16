@@ -37,37 +37,34 @@ public class Payment extends AppCompatActivity {
         parkingTime = findViewById(R.id.payTimePeriod);
 
 
-        btnPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        // }
+        btnPayment.setOnClickListener(view -> {
 
-                //new activity will not run until the user enters valid information
+            //new activity will not run until the user enters valid information
 
-                if(!validateName() |  !validatePhoneNumber() | !validateMinutes() | !validateLicencePlate() ){
+            if(!validateName()
+                    |  !validatePhoneNumber()
+                    | !validateMinutes()
+                    | !validateLicencePlate() ){
 
-                    return;
-                }
-
-                // storing values as a string ,those entered by the user
-                String driverName = nameOfPayer.getText().toString().trim().toUpperCase();
-                String paynum = ecoNumber.getText().toString().trim();
-                String mins = parkingTime.getText().toString().trim();
-                String numberplate = plateNumber.getText().toString().trim().toUpperCase();
-
-
-                //  opening payment description activity  and attaching values to it
-                Intent intent = new Intent(Payment.this, PaymentDescription.class);
-                intent.putExtra("keyname", driverName);
-                intent.putExtra("keyEcoNumber", paynum);
-                intent.putExtra("keymins", mins);
-                intent.putExtra("keyplate", numberplate);
-                startActivity(intent);
-                finish();
-
+                return;
             }
 
-            // }
+            // storing values as a string ,those entered by the user
+            String driverName = nameOfPayer.getText().toString().trim().toUpperCase();
+            String paynum = ecoNumber.getText().toString().trim();
+            String mins = parkingTime.getText().toString().trim();
+            String numberplate = plateNumber.getText().toString().trim().toUpperCase();
 
+
+            //  opening payment description activity  and attaching values to it
+            Intent intent = new Intent(Payment.this, PaymentDescription.class);
+            intent.putExtra("keyname", driverName);
+            intent.putExtra("keyEcoNumber", paynum);
+            intent.putExtra("keymins", mins);
+            intent.putExtra("keyplate", numberplate);
+            startActivity(intent);
+            finish();
 
         });
 

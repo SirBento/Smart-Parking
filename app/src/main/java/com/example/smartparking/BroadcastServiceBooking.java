@@ -101,7 +101,6 @@ public class BroadcastServiceBooking extends Service{
         }
     }
 
-
     @Override
     public void onDestroy() {
 
@@ -132,7 +131,6 @@ public class BroadcastServiceBooking extends Service{
 
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(BroadcastServiceBooking.this);
         managerCompat.notify(1,builder.build());
-
 
     }
 

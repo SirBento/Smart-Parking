@@ -15,12 +15,10 @@ public class MarshBookingAdapter extends RecyclerView.Adapter<MarshBookingAdapte
         Context context;
         ArrayList<MarshBookingData> list;
 
-
 public MarshBookingAdapter(Context context, ArrayList<MarshBookingData> list) {
         this.context = context;
         this.list = list;
         }
-
 public void setFilteredList(ArrayList<MarshBookingData> filteredList){
 
     this.list = filteredList;
@@ -72,7 +70,6 @@ public static class ViewHolder extends RecyclerView.ViewHolder{
 
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
-
 
                 MarshalBookRegNo =itemView.findViewById(R.id.historyregNo);
                 MarshalBookDate =itemView.findViewById(R.id.historydate);

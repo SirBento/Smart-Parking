@@ -16,9 +16,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     Context context;
     ArrayList<UserData> list;
 
-    //private LayoutInflater layoutInflater;
-    //private List<String> data;
-
     public Adapter(Context context, ArrayList<UserData> list) {
         this.context = context;
         this.list = list;
@@ -37,15 +34,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
-        //bind the textview with data received
-
-       /* UserData user = list.get(position);
-        holder.userhistoryName.setText(user.getName());
-        holder.userhistoryDate.setText(user.getDate());
-        holder.userhistoryTime.setText(user.getTime());
-        holder.userhistoryDuration.setText(user.getMins());
-        */
 
         // edits
 

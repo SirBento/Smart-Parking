@@ -24,21 +24,18 @@ public class NoInternetActivity extends AppCompatActivity {
         refreshNetwork = findViewById(R.id.btnNetRefresh);
 
 
-        refreshNetwork.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        refreshNetwork.setOnClickListener(v -> {
 
-                if(!haveNetworkConnection()){
+            if(!haveNetworkConnection()){
 
-                    Toast.makeText(NoInternetActivity.this, "You are not connected to the Internet. Check your connection and try again!!", Toast.LENGTH_LONG).show();
-                }else{
+                Toast.makeText(NoInternetActivity.this, "You are not connected to the Internet. Check your connection and try again!!", Toast.LENGTH_LONG).show();
+            }else{
 
-                    startActivity(new Intent(NoInternetActivity.this, SplashScreen.class));
-                    finish();
-
-                }
+                startActivity(new Intent(NoInternetActivity.this, SplashScreen.class));
+                finish();
 
             }
+
         });
     }
 

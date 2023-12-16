@@ -67,7 +67,6 @@ public class MinutesAfterBooking extends AppCompatActivity {
             ticketDuration.setText("Mins: "  + GlobalVariables.bookTicketDuration);
             bookticketMessage.setVisibility(View.INVISIBLE);
 
-
         }
 
         // If there is no current ticket  then set the data to default
@@ -86,32 +85,27 @@ public class MinutesAfterBooking extends AppCompatActivity {
 
 
 
-        iHaveParked.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        iHaveParked.setOnClickListener(view -> {
 
 
-                if (GlobalVariables.bookingTicketrunning){
+            if (GlobalVariables.bookingTicketrunning){
 
-                    revokeReservation();
+                revokeReservation();
 
-                    createCurrentTicket();
-                    GlobalVariables.bookStopTimer = true;
-                    GlobalVariables.bookuserMillisec = 0000;
-                    BroadcastServiceBooking.countDownTimer.cancel();
-                    //reset global variables
-                    startActivity(new Intent( MinutesAfterBooking.this, TimeLeft.class) );
-                    finish();
+                createCurrentTicket();
+                GlobalVariables.bookStopTimer = true;
+                GlobalVariables.bookuserMillisec = 0000;
+                BroadcastServiceBooking.countDownTimer.cancel();
+                //reset global variables
+                startActivity(new Intent( MinutesAfterBooking.this, TimeLeft.class) );
+                finish();
 
-                }else{
+            }else{
 
-                    Toast.makeText(MinutesAfterBooking.this, "Your Booking Was terminated because you failed to park in time!!!", Toast.LENGTH_LONG).show();
-
-                }
-
-
+                Toast.makeText(MinutesAfterBooking.this, "Your Booking Was terminated because you failed to park in time!!!", Toast.LENGTH_LONG).show();
 
             }
+
         });
 
 

@@ -24,7 +24,6 @@ public class ParkingHistory extends AppCompatActivity {
    Adapter myAdapter;
    ArrayList<UserData> list;
    String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-
    historyData historyData = new historyData();
    String duration,date,reg_no,time,Uid;
    Boolean historyExist = false;

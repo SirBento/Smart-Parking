@@ -62,7 +62,12 @@ public class SignUp extends AppCompatActivity {
 
         signUp.setOnClickListener(view -> {
 
-            if(!validateSecondPassword() | !validateFirstPassword() | !validateFirstName() |  !validatePhoneNumber() | !validateSurname() | !validateEmail() ){
+            if(!validateSecondPassword()
+                    | !validateFirstPassword()
+                    | !validateFirstName()
+                    | !validatePhoneNumber()
+                    | !validateSurname()
+                    | !validateEmail() ){
 
                 return;
             }

@@ -26,39 +26,30 @@ public class TopUp extends AppCompatActivity {
 
 
 
+        TopUpPay.setOnClickListener(v -> {
 
+            if(!validateMinutes() |  !validatePhoneNumber()){
 
-
-        TopUpPay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(!validateMinutes() |  !validatePhoneNumber()){
-
-                    return;
-                }
-                mins = topUpmins.getText().toString();
-                econum = topUpeconum.getText().toString();
-
-                //  opening payment description activity  and attaching values to it
-                Intent intent = new Intent(TopUp.this, TopUpDescription.class);
-                intent.putExtra("keymins", mins);
-                intent.putExtra("keynum", econum);
-                startActivity(intent);
-                finish();
-
-
+                return;
             }
+            mins = topUpmins.getText().toString();
+            econum = topUpeconum.getText().toString();
+
+            //  opening payment description activity  and attaching values to it
+            Intent intent = new Intent(TopUp.this, TopUpDescription.class);
+            intent.putExtra("keymins", mins);
+            intent.putExtra("keynum", econum);
+            startActivity(intent);
+            finish();
+
+
         });
 
 
-        TopUpCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        TopUpCancel.setOnClickListener(v -> {
 
-                startActivity(new Intent( TopUp.this,TimeLeft.class));
-                finish();
-            }
+            startActivity(new Intent( TopUp.this,TimeLeft.class));
+            finish();
         });
 
 

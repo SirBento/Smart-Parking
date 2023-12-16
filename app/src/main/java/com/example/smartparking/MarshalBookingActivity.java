@@ -23,18 +23,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MarshalBookingActivity extends AppCompatActivity {
-
     RecyclerView recyclerView;
     DatabaseReference database;
     MarshBookingAdapter myAdapter;
     ArrayList<MarshBookingData> list;
     private SearchView searchView;
-
     historyData historyData = new historyData();
     String duration,date,reg_no,time,Uid;
-
     private TextView noHistoryText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

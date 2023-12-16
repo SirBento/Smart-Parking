@@ -30,7 +30,6 @@ public class PieChartStats extends AppCompatActivity {
         populateValues();
 
         drawBarChart();
-
     }
 
     // display the Bar Chart Function
@@ -78,7 +77,6 @@ public class PieChartStats extends AppCompatActivity {
         //setting the bar  chart data
         barChart.setData(data);
 
-
         //Chart Animation
         barChart.animateY(5000);
         barChart.getDescription().setText("Weekly Parking Statistics");
@@ -89,7 +87,6 @@ public class PieChartStats extends AppCompatActivity {
 
 
     // Get values to populate to the pie chart
-
     private void populateValues(){
 
         SundayCount = getIntent().getIntExtra("keySundayValues",0);

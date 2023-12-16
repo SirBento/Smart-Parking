@@ -17,21 +17,9 @@ public class ViewTimeLeft extends AppCompatActivity {
        Button ViewCurrentTicket = findViewById(R.id.btnViewCurrentTicket );
 
 
-        ViewBookingTicket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        ViewBookingTicket.setOnClickListener(v -> startActivity(new Intent( ViewTimeLeft.this,MinutesAfterBooking.class)));
 
-                startActivity(new Intent( ViewTimeLeft.this,MinutesAfterBooking.class));
-            }
-        });
-
-        ViewCurrentTicket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent( ViewTimeLeft.this,TimeLeft.class));
-            }
-        });
+        ViewCurrentTicket.setOnClickListener(v -> startActivity(new Intent( ViewTimeLeft.this,TimeLeft.class)));
 
 
     }

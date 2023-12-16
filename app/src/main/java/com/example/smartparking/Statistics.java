@@ -73,7 +73,6 @@ public class Statistics extends AppCompatActivity {
         slotsDataRef = FirebaseDatabase.getInstance().getReference("Slots/Data");
 
 
-
         slotsDataRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -105,38 +104,32 @@ public class Statistics extends AppCompatActivity {
         });
 
         // WHEN CLICKED, OPENS AND DISPLAY A PIE CHART WITH TEH NUMBER OF CARS PARKED EACH DAY.
-        OpenPieChart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        OpenPieChart.setOnClickListener(v -> {
 
-              //  Intent intent = new Intent( Statistics.this,PieChartStats.class);
+          //  Intent intent = new Intent( Statistics.this,PieChartStats.class);
 
-                Intent intent = new Intent( Statistics.this,PieChartStats.class);
-                intent.putExtra("keySundayValues",SundayCount);
-                intent.putExtra("keyMondayValues",MondayCount);
-                intent.putExtra("keyTuesdayValues",TuesdayCount);
-                intent.putExtra("keyWednesdayValues",WednesdayCount);
-                intent.putExtra("keyThursdayValues",ThursdayCount);
-                intent.putExtra("keyFridayValues",FridayCount);
-                intent.putExtra("keySaturdayValues",SaturdayCount);
-                startActivity(intent);
-            }
+            Intent intent = new Intent( Statistics.this,PieChartStats.class);
+            intent.putExtra("keySundayValues",SundayCount);
+            intent.putExtra("keyMondayValues",MondayCount);
+            intent.putExtra("keyTuesdayValues",TuesdayCount);
+            intent.putExtra("keyWednesdayValues",WednesdayCount);
+            intent.putExtra("keyThursdayValues",ThursdayCount);
+            intent.putExtra("keyFridayValues",FridayCount);
+            intent.putExtra("keySaturdayValues",SaturdayCount);
+            startActivity(intent);
         });
 
         // WHEN CLICKED, OPENS AND DISPLAY A PIE CHART WITH TEH NUMBER OF CARS PARKED EACH DAY.
-        OpenBarchart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        OpenBarchart.setOnClickListener(v -> {
 
-                Intent intent = new Intent( Statistics.this,BarChartStats.class);
-                intent.putExtra("keyBeforeNineValues",beforeNineCount);
-                intent.putExtra("keyAfterNineValues",afterNineCount );
-                intent.putExtra("keyAfterTwelveValues",afterTwelveCount);
-                intent.putExtra("keyAfterThreeValues",afterThreeCount);
-                intent.putExtra("keyAfterSixValues",afterSixCount);
-                startActivity(intent);
+            Intent intent = new Intent( Statistics.this,BarChartStats.class);
+            intent.putExtra("keyBeforeNineValues",beforeNineCount);
+            intent.putExtra("keyAfterNineValues",afterNineCount );
+            intent.putExtra("keyAfterTwelveValues",afterTwelveCount);
+            intent.putExtra("keyAfterThreeValues",afterThreeCount);
+            intent.putExtra("keyAfterSixValues",afterSixCount);
+            startActivity(intent);
 
-            }
         });
 
         //Show loading dialog to ensure that all the data is collected from the database to populate charts

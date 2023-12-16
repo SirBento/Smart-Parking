@@ -75,34 +75,28 @@ public class TopUpDescription extends AppCompatActivity {
 
 
 
-        topUpPaymentbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        topUpPaymentbtn.setOnClickListener(v -> {
 
-                if(changeTime){
+            if(changeTime){
 
-                    //process payment
-                    loadingDialog.startLoadingDialog();
-                    payment();
+                //process payment
+                loadingDialog.startLoadingDialog();
+                payment();
 
-                }else{
+            }else{
 
-                    Toast.makeText(TopUpDescription.this, "Sorry!, we are unable to process your TopUp, please use our payment feature...", Toast.LENGTH_LONG).show();
-
-                }
-
+                Toast.makeText(TopUpDescription.this, "Sorry!, we are unable to process your TopUp, please use our payment feature...", Toast.LENGTH_LONG).show();
 
             }
+
+
         });
 
 
-        topUpCancelbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        topUpCancelbtn.setOnClickListener(v -> {
 
-                startActivity(new Intent( TopUpDescription.this,TopUp.class));
-                finish();
-            }
+            startActivity(new Intent( TopUpDescription.this,TopUp.class));
+            finish();
         });
 
     }

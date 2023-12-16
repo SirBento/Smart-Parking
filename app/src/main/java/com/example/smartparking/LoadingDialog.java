@@ -9,7 +9,6 @@ public class LoadingDialog {
     Activity activity;
     AlertDialog dialog;
 
-
     public LoadingDialog(Activity myActivity) {
 
         activity = myActivity;

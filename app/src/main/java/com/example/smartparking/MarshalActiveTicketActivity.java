@@ -24,7 +24,6 @@ import org.apache.commons.math3.analysis.function.Constant;
 import java.util.ArrayList;
 
 public class MarshalActiveTicketActivity extends AppCompatActivity {
-
     RecyclerView recyclerView;
     DatabaseReference database;
     MarshalActiveTicketAdapter myAdapter;
@@ -70,7 +69,6 @@ public class MarshalActiveTicketActivity extends AppCompatActivity {
         list = new ArrayList<>();
         myAdapter = new MarshalActiveTicketAdapter(this,list);
         recyclerView.setAdapter(myAdapter);
-
 
         listener = new ValueEventListener() {
             @Override
@@ -124,10 +122,6 @@ public class MarshalActiveTicketActivity extends AppCompatActivity {
         };
 
         database.addValueEventListener(listener);
-
-
-
-
 
 
 

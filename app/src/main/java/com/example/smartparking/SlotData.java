@@ -1,8 +1,6 @@
 package com.example.smartparking;
 
 public class SlotData {
-
-
     String slot1_Occ_Status;
     String slot2_Occ_Status;
 

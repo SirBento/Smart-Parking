@@ -36,7 +36,6 @@ public class AdminHomeActivity extends AppCompatActivity {
 
 
 
-
     // Get values to populate to the bar chart
 
     private void populateValues(){
@@ -52,10 +51,8 @@ public class AdminHomeActivity extends AppCompatActivity {
     }
 
 
-
     // display the Bar Chart Function
     private void drawBarChart(){
-
 
         //Pie Chart instance form the xml
         BarChart barChart = findViewById(R.id.barchartTest);

@@ -78,7 +78,6 @@ public class MarshalSlotTicketsActivity extends AppCompatActivity {
                         time = dataSnapshot.child("Time").getValue(String.class);
                         duration = dataSnapshot.child("Duration").getValue(String.class);
 
-
                         historyData.setHreg_no(reg_no);
                         historyData.setHdate(date);
                         historyData.setHtime(time);

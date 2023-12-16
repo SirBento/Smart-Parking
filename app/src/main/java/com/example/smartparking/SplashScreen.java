@@ -190,12 +190,7 @@ public class SplashScreen extends AppCompatActivity {
             SSLContext sc = SSLContext.getInstance("SSL");
             sc.init(null, victimizedManager, new SecureRandom());
             HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String s, SSLSession sslSession) {
-                    return true;
-                }
-            });
+            HttpsURLConnection.setDefaultHostnameVerifier((s, sslSession) -> true);
         } catch (Exception e) {
             e.printStackTrace();
         }

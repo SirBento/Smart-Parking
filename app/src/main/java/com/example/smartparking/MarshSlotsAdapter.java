@@ -46,8 +46,6 @@ public class MarshSlotsAdapter extends RecyclerView.Adapter<MarshSlotsAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull MarshSlotsAdapter.ViewHolder holder, int position) {
 
-
-
         // edits
 
         holder.MarshalSlotRegNo.setText("Reg_No: "+ list.get(position).getReg_No());
@@ -69,7 +67,6 @@ public class MarshSlotsAdapter extends RecyclerView.Adapter<MarshSlotsAdapter.Vi
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
 
             MarshalSlotRegNo =itemView.findViewById(R.id.historyregNo);
             MarshalSlotDate =itemView.findViewById(R.id.historydate);

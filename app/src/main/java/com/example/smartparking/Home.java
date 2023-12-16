@@ -110,79 +110,29 @@ public class Home extends AppCompatActivity {
 
         userticket();
         userBookingticket();
-        paymentCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        paymentCard.setOnClickListener(view -> startActivity(new Intent( Home.this,Payment.class) ));
 
-                startActivity(new Intent( Home.this,Payment.class) );
+        parkingTimeLeftcard.setOnClickListener(view -> startActivity(new Intent( Home.this,ViewTimeLeft.class)));
 
-            }
+
+        mapLocation.setOnClickListener(view -> startActivity(new Intent( Home.this,GetLocation.class) ));
+        parkingSlotscard.setOnClickListener(view -> startActivity(new Intent( Home.this,ParkingSlots.class) ));
+
+        userLogout.setOnClickListener(view -> {
+
+            FirebaseAuth.getInstance().signOut();
+
+            Toast.makeText(Home.this, "Log Out Successful", Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent( Home.this, Log_In.class) );
+            finish();
         });
 
-        parkingTimeLeftcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        parkingStatistics.setOnClickListener(view -> startActivity(new Intent( Home.this,Statistics.class)));
 
-                startActivity(new Intent( Home.this,ViewTimeLeft.class));
+        bookForParking.setOnClickListener(v -> startActivity(new Intent( Home.this,ParkingSlots.class)));
 
-            }
-        });
-
-
-        mapLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent( Home.this,GetLocation.class) );
-            }
-        });
-        parkingSlotscard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent( Home.this,ParkingSlots.class) );
-            }
-        });
-
-        userLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                FirebaseAuth.getInstance().signOut();
-
-                Toast.makeText(Home.this, "Log Out Successful", Toast.LENGTH_LONG).show();
-
-                startActivity(new Intent( Home.this, Log_In.class) );
-                finish();
-            }
-        });
-
-        parkingStatistics.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent( Home.this,Statistics.class));
-
-
-            }
-        });
-
-        bookForParking.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent( Home.this,ParkingSlots.class));
-
-            }
-        });
-
-        parkingHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent( Home.this,ParkingHistory.class));
-            }
-        });
+        parkingHistory.setOnClickListener(v -> startActivity(new Intent( Home.this,ParkingHistory.class)));
 
 
         //ASKING PERMISSIONS
@@ -207,31 +157,28 @@ public class Home extends AppCompatActivity {
         Task<LocationSettingsResponse> result = LocationServices.getSettingsClient(getApplicationContext())
                 .checkLocationSettings(builder.build());
 
-        result.addOnCompleteListener(new OnCompleteListener<LocationSettingsResponse>() {
-            @Override
-            public void onComplete(@NonNull Task<LocationSettingsResponse> task) {
+        result.addOnCompleteListener(task -> {
 
-                try {
-                    LocationSettingsResponse response = task.getResult(ApiException.class);
-                    Toast.makeText(Home.this, "GPS is already turned on", Toast.LENGTH_SHORT).show();
+            try {
+                LocationSettingsResponse response = task.getResult(ApiException.class);
+                Toast.makeText(Home.this, "GPS is already turned on", Toast.LENGTH_SHORT).show();
 
-                } catch (ApiException e) {
+            } catch (ApiException e) {
 
-                    switch (e.getStatusCode()) {
-                        case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                switch (e.getStatusCode()) {
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
 
-                            try {
-                                ResolvableApiException resolvableApiException = (ResolvableApiException) e;
-                                resolvableApiException.startResolutionForResult(Home.this, 2);
-                            } catch (IntentSender.SendIntentException ex) {
-                                ex.printStackTrace();
-                            }
-                            break;
+                        try {
+                            ResolvableApiException resolvableApiException = (ResolvableApiException) e;
+                            resolvableApiException.startResolutionForResult(Home.this, 2);
+                        } catch (IntentSender.SendIntentException ex) {
+                            ex.printStackTrace();
+                        }
+                        break;
 
-                        case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                            //Device does not have location
-                            break;
-                    }
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        //Device does not have location
+                        break;
                 }
             }
         });

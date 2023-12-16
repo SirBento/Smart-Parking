@@ -113,39 +113,30 @@ public class ParkingSlots extends AppCompatActivity {
 
         //opens booking page if the slot one is clicked
 
-        slot1Card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        slot1Card.setOnClickListener(view -> {
 
-                Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
-                intent.putExtra("keyname","1");
-                startActivity(intent);
-            }
+            Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
+            intent.putExtra("keyname","1");
+            startActivity(intent);
         });
 
         //opens booking page if the slot two is clicked
 
-        slot2Card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        slot2Card.setOnClickListener(view -> {
 
-                Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
-                intent.putExtra("keyname","2");
-                startActivity(intent);
-            }
+            Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
+            intent.putExtra("keyname","2");
+            startActivity(intent);
         });
 
         //opens booking page if the slot three is clicked
 
-        slot3Card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        slot3Card.setOnClickListener(view -> {
 
-                Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
-                intent.putExtra("keyname","3");
-                startActivity(intent);
+            Intent intent = new Intent( ParkingSlots.this,SlotBooking.class);
+            intent.putExtra("keyname","3");
+            startActivity(intent);
 
-            }
         });
 
     }

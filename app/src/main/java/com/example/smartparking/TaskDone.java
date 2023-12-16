@@ -18,14 +18,11 @@ public class TaskDone extends AppCompatActivity {
 
         DonePayment= (Button)findViewById(R.id.BookingDoneButton);
 
-        DonePayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        DonePayment.setOnClickListener(v -> {
 
-                Intent intent = new Intent( TaskDone.this, TimeLeft.class);
-                startActivity(intent);
-                finish();
-            }
+            Intent intent = new Intent( TaskDone.this, TimeLeft.class);
+            startActivity(intent);
+            finish();
         });
 
     }

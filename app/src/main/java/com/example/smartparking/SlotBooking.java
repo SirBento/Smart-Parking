@@ -26,17 +26,18 @@ public class SlotBooking extends AppCompatActivity {
         Bcartype = findViewById(R.id.BookingCarType);
         book =findViewById(R.id.btnBookNow);
 
-        book.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        book.setOnClickListener(view -> {
 
-                if(!validateName() |  !validatePhoneNumber() | !validateMinutes() | !validateLicencePlate() | !validateCarType() ){
+            if(!validateName()
+                    | !validatePhoneNumber()
+                    | !validateMinutes()
+                    | !validateLicencePlate()
+                    | !validateCarType() ){
 
-                    return;
-                }
-                openNewIntent();
-
+                return;
             }
+            openNewIntent();
+
         });
 
 

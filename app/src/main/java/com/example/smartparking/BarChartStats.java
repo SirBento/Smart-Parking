@@ -36,12 +36,6 @@ public class BarChartStats extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-
     // Get values to populate to the bar chart
 
     private void populateValues(){
@@ -60,8 +54,7 @@ public class BarChartStats extends AppCompatActivity {
     private void drawBarChart(){
 
         //Bar Chart instance form the xml
-        BarChart barChart = (BarChart) findViewById(R.id.ParkingHoursBarChart);
-
+        BarChart barChart = findViewById(R.id.ParkingHoursBarChart);
 
         //arraylist to store pie chat data
         ArrayList<BarEntry> parkingStats = new ArrayList<>();
@@ -99,7 +92,6 @@ public class BarChartStats extends AppCompatActivity {
         barChart.getAxisRight().setEnabled(false);
         //setting the bar  chart data
         barChart.setData(data);
-
 
         //Chart Animation
         barChart.animateY(5000);

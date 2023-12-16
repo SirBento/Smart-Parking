@@ -27,7 +27,6 @@ public class MarshalHomeActivity extends AppCompatActivity {
     private CardView bookedTickets,paymentTickets,stats,userLogout;
     // Reference to the parking slots booking status in the database
     DatabaseReference SlotBookingDatabaseRef;
-
     //An instance of slot data class to set and get values from the database
     SlotData slotData = new SlotData();
 
@@ -41,57 +40,41 @@ public class MarshalHomeActivity extends AppCompatActivity {
         stats = findViewById(R.id.marshalStatistics);
         userLogout =findViewById(R.id.marshalLogout);
 
-
-
         //Database references for all the 3 slots to check if they are booked or not
         SlotBookingDatabaseRef = FirebaseDatabase.getInstance().getReference("Reservations");
 
+        bookedTickets.setOnClickListener(v -> {
 
+            //open the booking history for all tickets
+            startActivity(new Intent( MarshalHomeActivity.this, MarshalBookingActivity.class) );
+            finish();
 
-        bookedTickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //open the booking history for all tickets
-                startActivity(new Intent( MarshalHomeActivity.this, MarshalBookingActivity.class) );
-                finish();
-
-            }
         });
 
-        paymentTickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        paymentTickets.setOnClickListener(v -> {
 
-                //open the parking history for all tickets
-                startActivity(new Intent( MarshalHomeActivity.this, MarshalSlotTicketsActivity.class) );
-                finish();
+            //open the parking history for all tickets
+            startActivity(new Intent( MarshalHomeActivity.this, MarshalSlotTicketsActivity.class) );
+            finish();
 
-            }
         });
 
-        stats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        stats.setOnClickListener(v -> {
 
-                //open the parking history for all tickets
-                startActivity(new Intent( MarshalHomeActivity.this, MarshalActiveTicketActivity.class) );
-                finish();
-            }
+            //open the parking history for all tickets
+            startActivity(new Intent( MarshalHomeActivity.this, MarshalActiveTicketActivity.class) );
+            finish();
         });
 
 
-        userLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        userLogout.setOnClickListener(v -> {
 
-                FirebaseAuth.getInstance().signOut();
+            FirebaseAuth.getInstance().signOut();
 
-                Toast.makeText(MarshalHomeActivity.this, "Log Out Successful", Toast.LENGTH_LONG).show();
+            Toast.makeText(MarshalHomeActivity.this, "Log Out Successful", Toast.LENGTH_LONG).show();
 
-                startActivity(new Intent( MarshalHomeActivity.this, Log_In.class) );
-                finish();
-            }
+            startActivity(new Intent( MarshalHomeActivity.this, Log_In.class) );
+            finish();
         });
 
 

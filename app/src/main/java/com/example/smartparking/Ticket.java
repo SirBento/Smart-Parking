@@ -15,7 +15,6 @@ public class Ticket {
         this.bookUid = bookUid;
     }
 
-
     public String getBookTicketname() {
         return bookTicketname;
     }
@@ -37,8 +36,7 @@ public class Ticket {
     }
 
     public void setBookTicketDuration(String bookTicketDuration) {
-        this.bookTicketDuration = bookTicketDuration;
-    }
+        this.bookTicketDuration = bookTicketDuration;}
 
     public String getBookSlot() {
         return bookSlot;

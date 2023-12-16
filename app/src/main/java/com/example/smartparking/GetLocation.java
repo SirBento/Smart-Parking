@@ -142,23 +142,20 @@ public class GetLocation extends FragmentActivity implements OnMapReadyCallback{
     protected void onStart() {
         super.onStart();
 
-        getDirection = (Button) findViewById(R.id.getDirection);
+        getDirection = findViewById(R.id.getDirection);
 
         // opens google navigation corner by corner direction when clicked
 
-        getDirection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        getDirection.setOnClickListener(v -> {
 
 
-                Intent intent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("google.navigation:q=-18.9779536303923,32.67726898142822&mode=d"));
-                intent.setPackage("com.google.android.apps.maps");
-                if(intent.resolveActivity(getPackageManager())!=null) {
-                    startActivity(intent);
-                }
-
+            Intent intent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("google.navigation:q=-18.9779536303923,32.67726898142822&mode=d"));
+            intent.setPackage("com.google.android.apps.maps");
+            if(intent.resolveActivity(getPackageManager())!=null) {
+                startActivity(intent);
             }
+
         });
     }
 

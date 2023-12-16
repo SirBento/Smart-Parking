@@ -30,7 +30,6 @@ public class BroadcastService extends Service {
     private boolean isRunning;
     DatabaseReference databaseRef;
 
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -93,11 +92,6 @@ public class BroadcastService extends Service {
                     sendBroadcast(intent);
 
                     GlobalVariables.userMillisec = millisUntilFinished;
-                    // reduce the seconds in the global variable
-                    Log.i("BroadcastService", "Global Variable " + GlobalVariables.userMillisec);
-
-                    //sharedPreferences = getSharedPreferences(getPackageName(),MODE_PRIVATE);
-                    // long millis = sharedPreferences.getLong("time",0);
 
                     isRunning = true;
                 }

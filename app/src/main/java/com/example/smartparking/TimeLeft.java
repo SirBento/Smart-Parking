@@ -25,7 +25,6 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeLeft extends AppCompatActivity {
 
-
     String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
     DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("CurrentTicket");
     private Button TopUp;
@@ -87,22 +86,18 @@ public class TimeLeft extends AppCompatActivity {
 
 
 
+        TopUp.setOnClickListener(v -> {
 
-        TopUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            if(!GlobalVariables.tucketDatExist){
 
-                if(!GlobalVariables.tucketDatExist){
+                Toast.makeText(TimeLeft.this, "No ticket running, hence you can't make a TopUp", Toast.LENGTH_LONG).show();
 
-                    Toast.makeText(TimeLeft.this, "No ticket running, hence you can't make a TopUp", Toast.LENGTH_LONG).show();
+            }else{
 
-                }else{
-
-                    startActivity(new Intent( TimeLeft.this,TopUp.class));
-                    finish(); //remove
-                }
-
+                startActivity(new Intent( TimeLeft.this,TopUp.class));
+                finish(); //remove
             }
+
         });
 
 

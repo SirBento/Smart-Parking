@@ -1,9 +1,7 @@
 package com.example.smartparking;
 
 public class MarshBookingData {
-
     String reg_No, date,time,mins;
-
 
     public String getReg_No() {
         return reg_No;

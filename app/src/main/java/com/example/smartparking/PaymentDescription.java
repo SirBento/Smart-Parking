@@ -65,14 +65,12 @@ public class PaymentDescription extends AppCompatActivity {
          numberPlate = getIntent().getStringExtra("keyplate");
 
 
-
         //making the number of minutes public so that it can be used in the time left activity.
-
 
         //calculating the amount to be paid
         // calculate the amount to be paid 67(bond per 10 mins)actual fee (400 per hour)
         // 6.7 rtgs per minute
-        amounttobepaid =  (double)(Integer.parseInt(mins)* 6.7);
+        amounttobepaid = Integer.parseInt(mins)* 6.7;
 
 
         name.setText("Name: " + driverName);
@@ -85,25 +83,17 @@ public class PaymentDescription extends AppCompatActivity {
 
        //CreateCurrentTicket(); //to be removed
 
-        paymentbtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+        paymentbtn.setOnClickListener(view -> {
 
-                        loadingDialog.startLoadingDialog();
-                        Paying();
+            loadingDialog.startLoadingDialog();
+            Paying();
 
-                    }
+        });
 
-                });
+                cancelbtn.setOnClickListener(view -> {
 
-                cancelbtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        startActivity(new Intent( PaymentDescription.this, com.example.smartparking.Payment.class) );
-                        finish();
-                    }
+                    startActivity(new Intent( PaymentDescription.this, com.example.smartparking.Payment.class) );
+                    finish();
                 });
 
 

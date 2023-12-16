@@ -80,24 +80,17 @@ public class BookingDescription extends AppCompatActivity {
 
    // createBookingTicket(); //
 
-        bookpaymentbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadingDialog.startLoadingDialog();
-                BookingPayment();
-
-            }
+        bookpaymentbtn.setOnClickListener(view -> {
+            loadingDialog.startLoadingDialog();
+            BookingPayment();
 
         });
 
-        bookcancelbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        bookcancelbtn.setOnClickListener(view -> {
 
 
-                startActivity(new Intent( BookingDescription.this,SlotBooking.class) );
-                finish();
-            }
+            startActivity(new Intent( BookingDescription.this,SlotBooking.class) );
+            finish();
         });
 
     }
@@ -199,10 +192,8 @@ public class BookingDescription extends AppCompatActivity {
         bookingMap.put("Time", CurrenTime);
         bookingMap.put("Uid",userUid );
 
-
         mRef.push().setValue(bookingMap);
 
-       //mRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(bookingMap);
 
 
         if(slotVal.equals("1")){

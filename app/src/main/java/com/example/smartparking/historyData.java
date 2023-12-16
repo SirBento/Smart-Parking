@@ -1,9 +1,7 @@
 package com.example.smartparking;
 
 public class historyData {
-
     String hduration,hdate,hreg_no,htime,hUid;
-
     public String getHduration() {
         return hduration;
     }
@@ -11,7 +9,6 @@ public class historyData {
     public void setHduration(String hduration) {
         this.hduration = hduration;
     }
-
     public String getHdate() {
         return hdate;
     }

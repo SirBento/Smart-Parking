@@ -16,7 +16,6 @@ public class MarshalActiveTicketAdapter extends RecyclerView.Adapter<MarshalActi
     Context context;
     ArrayList<MarshBookingData> list;
 
-
     public MarshalActiveTicketAdapter(Context context, ArrayList<MarshBookingData> list) {
         this.context = context;
         this.list = list;
@@ -26,7 +25,6 @@ public class MarshalActiveTicketAdapter extends RecyclerView.Adapter<MarshalActi
 
         this.list = filteredList;
         notifyDataSetChanged();
-
     }
 
     @NonNull
@@ -42,8 +40,6 @@ public class MarshalActiveTicketAdapter extends RecyclerView.Adapter<MarshalActi
 
     @Override
     public void onBindViewHolder(@NonNull MarshalActiveTicketAdapter.ViewHolder holder, int position) {
-
-
 
         // edits
 
@@ -73,8 +69,6 @@ public class MarshalActiveTicketAdapter extends RecyclerView.Adapter<MarshalActi
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-
             MarshalActiveTicketName =itemView.findViewById(R.id.historyregNo);
             MarshalActiveTicketDate =itemView.findViewById(R.id.historydate);
             MarshalActiveTicketNum= itemView.findViewById(R.id.historyTime);

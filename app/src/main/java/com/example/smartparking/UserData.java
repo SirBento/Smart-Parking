@@ -4,7 +4,6 @@ public class UserData {
 
     String reg_No, date,time,mins;
 
-
     public String getReg_No() {
         return reg_No;
     }

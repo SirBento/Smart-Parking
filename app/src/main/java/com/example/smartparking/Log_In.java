@@ -71,49 +71,43 @@ public class Log_In extends AppCompatActivity {
         Button btn_Sign_Up = findViewById(R.id.btnSignUp);
         btn_Sign_Up.setOnClickListener(view -> startActivity(new Intent( Log_In.this,SignUp.class) ));
 
-
         forgotPassword.setOnClickListener(view -> startActivity(new Intent( Log_In.this,ForgotPassword.class) ));
 
     }
-
-
 
     private void userLogin(){
 
         String LogIne_mail = log_Email.getText().toString().trim();
         String LogInpass = logPass.getText().toString().trim();
 
-        mAuth.signInWithEmailAndPassword(LogIne_mail,LogInpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+        mAuth.signInWithEmailAndPassword(LogIne_mail,LogInpass).addOnCompleteListener(task -> {
 
-                if(task.isSuccessful()){
+            if(task.isSuccessful()){
 
-                    //checking if the account is verified , if not the user has to first verify the account before logging in
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                //checking if the account is verified , if not the user has to first verify the account before logging in
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                    if(user.isEmailVerified()){
+                if(user.isEmailVerified()){
 
-                        userType(user.getUid());
-                        loadingDialog.dismissDialog();
-
-                    }else{
-
-                        user.sendEmailVerification();
-                        loadingDialog.dismissDialog();
-                        Toast.makeText(Log_In.this,
-                                "Account not verified. Please check your email to verify your account the Login",
-                                Toast.LENGTH_LONG).show();
-                    }
-
-
-                }else {
+                    userType(user.getUid());
                     loadingDialog.dismissDialog();
-                    Toast.makeText(Log_In.this, "LogIn Failed!!! Please check your credentials and your internet connection", Toast.LENGTH_LONG).show();
 
+                }else{
+
+                    user.sendEmailVerification();
+                    loadingDialog.dismissDialog();
+                    Toast.makeText(Log_In.this,
+                            "Account not verified. Please check your email to verify your account the Login",
+                            Toast.LENGTH_LONG).show();
                 }
 
+
+            }else {
+                loadingDialog.dismissDialog();
+                Toast.makeText(Log_In.this, "LogIn Failed!!! Please check your credentials and your internet connection", Toast.LENGTH_LONG).show();
+
             }
+
         });
 
 
