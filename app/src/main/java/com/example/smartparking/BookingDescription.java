@@ -51,8 +51,6 @@ public class BookingDescription extends AppCompatActivity {
         TextView time = findViewById(R.id.bookminutesOfParking);
         TextView amount = findViewById(R.id.bookamountToBePaid);
 
-
-
         //getting values from the previous activity
 
           driverName = getIntent().getStringExtra("keyname");
@@ -126,12 +124,6 @@ public class BookingDescription extends AppCompatActivity {
                 String instructions  = response.instructions();
                 Toast.makeText(BookingDescription.this, "Pay now", Toast.LENGTH_LONG).show();
 
-                // Get the poll URL of the transaction
-              //  String pollUrl = response.pollUrl();
-                //StatusResponse status = paynow.pollTransaction(pollUrl);
-
-                //delay checking the payment status by 15 seconds
-
                 Handler handler = new Handler();
 
                 handler.postDelayed(new Runnable() {
@@ -176,7 +168,6 @@ public class BookingDescription extends AppCompatActivity {
         }
 
     }
-
 
     private void saveData(){
 

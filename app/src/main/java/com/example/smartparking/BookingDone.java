@@ -15,9 +15,6 @@ public class BookingDone extends AppCompatActivity {
         setContentView(R.layout.activity_booking_done);
 
         DoneBooking= findViewById(R.id.BookingDoneButton);
-
-
-
         DoneBooking.setOnClickListener(v -> {
 
             Intent intent = new Intent( BookingDone.this, MinutesAfterBooking.class);

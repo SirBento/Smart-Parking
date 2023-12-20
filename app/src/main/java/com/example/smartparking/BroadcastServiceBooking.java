@@ -21,7 +21,6 @@ public class BroadcastServiceBooking extends Service{
     public long userTimeInSeconds;
     private boolean isRunning;
 
-
     @Override
     public void onCreate() {
         super.onCreate();
