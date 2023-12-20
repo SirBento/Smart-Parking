@@ -77,7 +77,6 @@ public class BroadcastServiceBooking extends Service{
                         // constantly update the global variable with the correct left time
                         GlobalVariables.bookuserMillisec = millisUntilFinished;
 
-                        Log.i("BroadcastServiceBooking", "Global Variable " + GlobalVariables.bookuserMillisec);
 
                         isRunning = true;
                     }
@@ -86,7 +85,6 @@ public class BroadcastServiceBooking extends Service{
 
                         NotifyChannelOreo();
                         sendNotification();
-
 
                         isRunning = false;
 
@@ -104,7 +102,6 @@ public class BroadcastServiceBooking extends Service{
     @Override
     public void onDestroy() {
 
-        //  countDownTimer.cancel();
         super.onDestroy();
     }
 

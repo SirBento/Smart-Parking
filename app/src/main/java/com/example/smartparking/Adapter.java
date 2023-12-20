@@ -36,13 +36,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         // edits
-
         holder.userhistoryRegNo.setText("Reg_No: "+list.get(position).getReg_No());
         holder.userhistoryDate.setText("Date:"+list.get(position).getDate());
         holder.userhistoryTime.setText("Time: "+list.get(position).getTime());
         holder.userhistoryDuration.setText("Minutes: "+ list.get(position).getMins());
-
-
     }
 
     @Override
@@ -51,9 +48,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
         TextView userhistoryRegNo,userhistoryDate,userhistoryTime,userhistoryDuration;
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
