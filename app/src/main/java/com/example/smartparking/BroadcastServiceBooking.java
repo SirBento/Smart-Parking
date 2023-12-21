@@ -20,7 +20,6 @@ public class BroadcastServiceBooking extends Service{
     public  static CountDownTimer countDownTimer = null;
     public long userTimeInSeconds;
     private boolean isRunning;
-
     @Override
     public void onCreate() {
         super.onCreate();

@@ -77,7 +77,6 @@ public class BroadcastService extends Service {
             };
             countDownTimer.start();
 
-
         } else {
 
             // continue running
@@ -110,7 +109,6 @@ public class BroadcastService extends Service {
             };
             countDownTimer.start();
         }
-
     }
     }
 

@@ -3,7 +3,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,11 +21,8 @@ import zw.co.paynow.responses.StatusResponse;
 
 
 public class BookingDescription extends AppCompatActivity {
-
     private double bookamounttobepaid;
-
     String driverName,paynum, mins,numberPlate,date,CurrenTime,slotVal,paymentException,payNowException;
-
     //Firebase instances
     private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRef = mDatabase.getReference().child("Bookings");
@@ -37,12 +33,10 @@ public class BookingDescription extends AppCompatActivity {
     String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
     LoadingDialog loadingDialog = new LoadingDialog(BookingDescription.this);
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_description);
-
 
         Button bookpaymentbtn = findViewById(R.id.btnPayment);
         Button bookcancelbtn = findViewById(R.id.btncancel);
