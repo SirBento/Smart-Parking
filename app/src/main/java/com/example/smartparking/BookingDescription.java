@@ -19,7 +19,6 @@ import zw.co.paynow.core.Paynow;
 import zw.co.paynow.responses.MobileInitResponse;
 import zw.co.paynow.responses.StatusResponse;
 
-
 public class BookingDescription extends AppCompatActivity {
     private double bookamounttobepaid;
     String driverName,paynum, mins,numberPlate,date,CurrenTime,slotVal,paymentException,payNowException;
@@ -32,7 +31,6 @@ public class BookingDescription extends AppCompatActivity {
     DatabaseReference databaseRef = mDatabase .getReference("BookingTicket");
     String userUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
     LoadingDialog loadingDialog = new LoadingDialog(BookingDescription.this);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +69,6 @@ public class BookingDescription extends AppCompatActivity {
         GlobalVariables.bookregNo = numberPlate;
 
    // createBookingTicket(); //
-
         bookpaymentbtn.setOnClickListener(view -> {
             loadingDialog.startLoadingDialog();
             BookingPayment();
