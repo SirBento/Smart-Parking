@@ -32,7 +32,6 @@ public class BarChartStats extends AppCompatActivity {
          populateValues();
          drawBarChart();
 
-
     }
 
 
@@ -47,8 +46,6 @@ public class BarChartStats extends AppCompatActivity {
         afterSixCount = getIntent().getIntExtra("keyAfterSixValues",0);
 
     }
-
-
 
     // display the Bar Chart Function
     private void drawBarChart(){

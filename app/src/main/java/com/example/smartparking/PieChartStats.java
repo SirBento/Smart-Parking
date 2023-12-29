@@ -34,8 +34,6 @@ public class PieChartStats extends AppCompatActivity {
 
     // display the Bar Chart Function
     private void drawBarChart(){
-
-
         //Pie Chart instance form the xml
         BarChart barChart = findViewById(R.id.barchartTest);
 
@@ -58,7 +56,6 @@ public class PieChartStats extends AppCompatActivity {
         bardataset.setValueTextSize(16f);
         // the color to the bar  chart values
         bardataset.setValueTextColor(Color.BLACK);
-
 
         final ArrayList<String> labels = new ArrayList<String>();
         labels.add("Sun");

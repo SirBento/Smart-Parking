@@ -34,8 +34,6 @@ public class AdminHomeActivity extends AppCompatActivity {
         drawBarChart();
     }
 
-
-
     // Get values to populate to the bar chart
 
     private void populateValues(){
@@ -94,7 +92,6 @@ public class AdminHomeActivity extends AppCompatActivity {
         barChart.getAxisRight().setEnabled(false);
         //setting the bar  chart data
         barChart.setData(data);
-
 
         //Chart Animation
         barChart.animateY(5000);
