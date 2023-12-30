@@ -20,8 +20,9 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 
 public class AdminHomeActivity extends AppCompatActivity {
-
-    private int SundayCount,MondayCount,TuesdayCount,WednesdayCount,ThursdayCount,FridayCount,SaturdayCount;
+    private int SundayCount,MondayCount,TuesdayCount
+               ,WednesdayCount,ThursdayCount,FridayCount
+               ,SaturdayCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
