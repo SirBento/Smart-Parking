@@ -79,7 +79,6 @@ public class PieChartStats extends AppCompatActivity {
         barChart.getDescription().setText("Weekly Parking Statistics");
         barChart.animate();
 
-
     }
 
 

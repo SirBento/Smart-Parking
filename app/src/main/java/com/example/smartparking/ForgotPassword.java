@@ -36,8 +36,6 @@ public class ForgotPassword extends AppCompatActivity {
     }
 
 
-
-
     private void resetPassword() {
 
         String e_mail = emailReset.getText().toString().trim();

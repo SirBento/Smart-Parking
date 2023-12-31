@@ -75,7 +75,6 @@ public class BroadcastServiceBooking extends Service{
                         // constantly update the global variable with the correct left time
                         GlobalVariables.bookuserMillisec = millisUntilFinished;
 
-
                         isRunning = true;
                     }
 

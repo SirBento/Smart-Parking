@@ -253,7 +253,6 @@ public class Home extends AppCompatActivity {
         }
     }
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -266,7 +265,6 @@ public class Home extends AppCompatActivity {
                 finish();
                 startActivity(new Intent( Home.this,Home.class));
 
-
             }else{
 
                 //Change to the actual code to be run after the permission is denied
@@ -274,7 +272,6 @@ public class Home extends AppCompatActivity {
 
             }
         }
-
 
 }
 
@@ -295,7 +292,6 @@ public class Home extends AppCompatActivity {
                         reg_no = dataSnapshot.child("Reg_No").getValue(String.class);
                         Uid = dataSnapshot.child("Uid").getValue(String.class);
 
-
                         GlobalVariables.ticketname= driver;
                         GlobalVariables.ticketDate = date;
                         GlobalVariables.ticketDuration = duration;
@@ -310,9 +306,7 @@ public class Home extends AppCompatActivity {
 
                     GlobalVariables.tucketDatExist = false;
 
-
                 }
-
             }
 
             @Override
@@ -328,8 +322,6 @@ public class Home extends AppCompatActivity {
 
 
     private void userBookingticket() {
-
-
         databaseBookingRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -338,14 +330,12 @@ public class Home extends AppCompatActivity {
 
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
 
-
                         booktname = dataSnapshot.child("Name").getValue(String.class);
                         bookDate= dataSnapshot.child("Date").getValue(String.class);
                         bookDuration = dataSnapshot.child("Duration").getValue(String.class);
                         bookregNo = dataSnapshot.child("Reg_No").getValue(String.class);
                         bookSlot = dataSnapshot.child("Slot").getValue(String.class);
                         bookUid = dataSnapshot.child("Uid").getValue(String.class);
-
 
                         GlobalVariables.bookTicketname = booktname;
                         GlobalVariables.bookTicketDate = bookDate;
@@ -364,14 +354,12 @@ public class Home extends AppCompatActivity {
                     GlobalVariables.bookingTicketExist = false;
 
                 }
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
                 Toast.makeText(Home.this, "Please Check Your Internet Connection And Restart The Application!!!!!", Toast.LENGTH_LONG).show();
-
             }
         });
 
