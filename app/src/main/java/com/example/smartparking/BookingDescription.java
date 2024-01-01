@@ -54,13 +54,11 @@ public class BookingDescription extends AppCompatActivity {
           date =  new SimpleDateFormat("dd/LLL/yyyy", Locale.getDefault()).format(new Date());
           CurrenTime = new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());
 
-
         //calculating the amount to be paid as per 400 rtgs per hour
         bookamounttobepaid = (Integer.parseInt(mins)* 6.7);
 
         //adding 10% of the amount to be paid as booking fee
         bookamounttobepaid = bookamounttobepaid + (bookamounttobepaid*0.1);
-
 
         name.setText("Name: " + driverName);
         number.setText("Ecocash Number: " + paynum);
@@ -71,12 +69,9 @@ public class BookingDescription extends AppCompatActivity {
    // createBookingTicket(); //
         bookpaymentbtn.setOnClickListener(view -> {
             loadingDialog.startLoadingDialog();
-            BookingPayment();
-
-        });
+            BookingPayment();});
 
         bookcancelbtn.setOnClickListener(view -> {
-
 
             startActivity(new Intent( BookingDescription.this,SlotBooking.class) );
             finish();

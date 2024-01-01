@@ -52,7 +52,6 @@ public class BroadcastServiceBooking extends Service{
                 };
                 countDownTimer.start();
 
-
             } else {
 
                 // cancel the timer if the user has parked
@@ -75,18 +74,15 @@ public class BroadcastServiceBooking extends Service{
                         // constantly update the global variable with the correct left time
                         GlobalVariables.bookuserMillisec = millisUntilFinished;
 
-                        isRunning = true;
-                    }
+                        isRunning = true;  }
 
                     public void onFinish() {
 
                         NotifyChannelOreo();
                         sendNotification();
-
                         isRunning = false;
+                        GlobalVariables.bookingTicketExist = false; }
 
-                        GlobalVariables.bookingTicketExist = false;
-                    }
                 };
                 countDownTimer.start();
             }
@@ -108,8 +104,6 @@ public class BroadcastServiceBooking extends Service{
         return null;
     }
 
-//deleting a notification channel
-   // notificationManager.deleteNotificationChannel("channel_id");
     private void sendNotification(){
 
         //creating an intent that is called when the notification is clicked

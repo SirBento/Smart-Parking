@@ -349,11 +349,7 @@ public class Home extends AppCompatActivity {
 
                     GlobalVariables.bookingTicketExist = true;
 
-                }else {
-
-                    GlobalVariables.bookingTicketExist = false;
-
-                }
+                }else { GlobalVariables.bookingTicketExist = false; }
             }
 
             @Override
@@ -378,16 +374,10 @@ public class Home extends AppCompatActivity {
                     haveConnectedWifi = true;
             if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
                 if (ni.isConnected())
-                    haveConnectedMobile = true;
-        }
+                    haveConnectedMobile = true; }
 
         return haveConnectedWifi || haveConnectedMobile;
     }
 
-   /** private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager != null ? connectivityManager.getActiveNetworkInfo() : null;
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }*/
+
 }
