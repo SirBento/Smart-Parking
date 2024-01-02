@@ -112,29 +112,26 @@ public class BookingDescription extends AppCompatActivity {
 
                 Handler handler = new Handler();
 
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
+                handler.postDelayed(() -> {
 
-                        String pollUrl = response.pollUrl();
-                        StatusResponse status = paynow.pollTransaction(pollUrl);
+                    String pollUrl = response.pollUrl();
+                    StatusResponse status = paynow.pollTransaction(pollUrl);
 
-                        if (status.isPaid()) {
+                    if (status.isPaid()) {
 
-                            saveData();
-                            createBookingTicket();
-                            Toast.makeText(BookingDescription.this, "Thank you for paying", Toast.LENGTH_LONG).show();
-                            loadingDialog.dismissDialog();
-                            startActivity(new Intent( BookingDescription.this, BookingDone.class) );
-                            finish();
+                        saveData();
+                        createBookingTicket();
+                        Toast.makeText(BookingDescription.this, "Thank you for paying", Toast.LENGTH_LONG).show();
+                        loadingDialog.dismissDialog();
+                        startActivity(new Intent( BookingDescription.this, BookingDone.class) );
+                        finish();
 
-                        } else {
+                    } else {
 
-                            loadingDialog.dismissDialog();
-                            Toast.makeText(BookingDescription.this, "Something wrong happened!!! Payment Failed", Toast.LENGTH_LONG).show();
-                        }
-
+                        loadingDialog.dismissDialog();
+                        Toast.makeText(BookingDescription.this, "Something wrong happened!!! Payment Failed", Toast.LENGTH_LONG).show();
                     }
+
                 }, 20000); // dismiss the dialog after 7 seconds
 
 

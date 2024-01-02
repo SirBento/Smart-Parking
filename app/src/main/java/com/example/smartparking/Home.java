@@ -66,7 +66,6 @@ public class Home extends AppCompatActivity {
     private CardView paymentCard, parkingTimeLeftcard, mapLocation, parkingSlotscard,
                     parkingStatistics, userLogout, bookForParking, parkingHistory;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +101,6 @@ public class Home extends AppCompatActivity {
         bookForParking=(CardView) findViewById(R.id.bookForParking);
         parkingHistory = (CardView) findViewById(R.id.parkingHistory);
 
-
         locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest.setInterval(5000);
@@ -113,7 +111,6 @@ public class Home extends AppCompatActivity {
         paymentCard.setOnClickListener(view -> startActivity(new Intent( Home.this,Payment.class) ));
 
         parkingTimeLeftcard.setOnClickListener(view -> startActivity(new Intent( Home.this,ViewTimeLeft.class)));
-
 
         mapLocation.setOnClickListener(view -> startActivity(new Intent( Home.this,GetLocation.class) ));
         parkingSlotscard.setOnClickListener(view -> startActivity(new Intent( Home.this,ParkingSlots.class) ));
@@ -134,16 +131,11 @@ public class Home extends AppCompatActivity {
 
         parkingHistory.setOnClickListener(v -> startActivity(new Intent( Home.this,ParkingHistory.class)));
 
-
         //ASKING PERMISSIONS
         getCurrentLocation();
 
 
     }
-
-
-
-
 
 
     //Turn on GPS if the user grants access and the gps is off
@@ -158,7 +150,6 @@ public class Home extends AppCompatActivity {
                 .checkLocationSettings(builder.build());
 
         result.addOnCompleteListener(task -> {
-
             try {
                 LocationSettingsResponse response = task.getResult(ApiException.class);
                 Toast.makeText(Home.this, "GPS is already turned on", Toast.LENGTH_SHORT).show();
@@ -344,7 +335,6 @@ public class Home extends AppCompatActivity {
                         GlobalVariables.bookSlot =bookSlot;
                         GlobalVariables.bookUid = bookUid;
                         GlobalVariables.bookuserMillisec =(30* 60000);
-
                     }
 
                     GlobalVariables.bookingTicketExist = true;

@@ -57,14 +57,11 @@ public class BroadcastServiceBooking extends Service{
                 // cancel the timer if the user has parked
                 if(GlobalVariables.bookingTicketrunning){
                     countDownTimer.cancel();
-
                 }else{
 
                 // continue running if the user has not yet parked
-
                 countDownTimer.cancel();
                 countDownTimer = new CountDownTimer(userTimeInSeconds, 1000) { // adjust the milli seconds here
-
                     public void onTick(long millisUntilFinished) {
 
                         Log.i("BroadcastServiceBooking", "Seconds: " + millisUntilFinished / 1000);
@@ -75,18 +72,15 @@ public class BroadcastServiceBooking extends Service{
                         GlobalVariables.bookuserMillisec = millisUntilFinished;
 
                         isRunning = true;  }
-
                     public void onFinish() {
 
                         NotifyChannelOreo();
                         sendNotification();
                         isRunning = false;
                         GlobalVariables.bookingTicketExist = false; }
-
                 };
                 countDownTimer.start();
             }
-
             }
 
         }
@@ -103,7 +97,6 @@ public class BroadcastServiceBooking extends Service{
     public IBinder onBind(Intent intent) {
         return null;
     }
-
     private void sendNotification(){
 
         //creating an intent that is called when the notification is clicked
