@@ -59,7 +59,6 @@ public class SignUp extends AppCompatActivity {
 // creating a variable for accessing the database authentication
         mAuth = FirebaseAuth.getInstance();
 
-
         signUp.setOnClickListener(view -> {
 
             if(!validateSecondPassword()

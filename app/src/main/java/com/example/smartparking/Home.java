@@ -71,8 +71,9 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
-        if (dayOfTheWeek.equals("Sunday") && CurrentTime.equals("01:00 PM") || CurrentTime.equals("01:00 p.m.")){
+        if ((dayOfTheWeek.equals("Sunday")
+                && CurrentTime.equals("01:00 PM") )
+                || CurrentTime.equals("01:00 p.m.")){
 
             slotdataRecords.removeValue();
         }
@@ -87,7 +88,6 @@ public class Home extends AppCompatActivity {
         if(!haveNetworkConnection()){
 
             Toast.makeText(Home.this, "Please Check Your INTERNET CONNECTION And RESTART The Application!!!!! Otherwise the application will not work as expected", Toast.LENGTH_LONG).show();
-
         }
 
         databaseRef = FirebaseDatabase.getInstance().getReference("CurrentTicket");

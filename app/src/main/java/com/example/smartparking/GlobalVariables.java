@@ -9,6 +9,5 @@ public class GlobalVariables {
     public static String bookTicketname, bookTicketDate, bookTicketDuration, bookSlot, bookUid, bookregNo;
 
     public static boolean topup = false;
-
 }
 

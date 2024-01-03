@@ -80,7 +80,6 @@ public class BookingDescription extends AppCompatActivity {
     }
 
 
-
     private void BookingPayment(){
 
         try {

@@ -26,7 +26,6 @@ public class ForgotPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-
         emailReset =(EditText) findViewById(R.id.passReset);
         btnresetPass =(Button) findViewById(R.id.btnReset);
         mAuth = FirebaseAuth.getInstance();
@@ -34,7 +33,6 @@ public class ForgotPassword extends AppCompatActivity {
         btnresetPass.setOnClickListener(view -> resetPassword());
 
     }
-
 
     private void resetPassword() {
 
@@ -60,7 +58,6 @@ public class ForgotPassword extends AppCompatActivity {
                 Toast.makeText(ForgotPassword.this, "Check your email to reset your password", Toast.LENGTH_LONG).show();
 
             }else {
-
                 Toast.makeText(ForgotPassword.this, "Failed to reset your password. PLEASE TRY AGAIN!!", Toast.LENGTH_LONG).show();
 
             }

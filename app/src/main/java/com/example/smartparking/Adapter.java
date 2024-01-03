@@ -19,7 +19,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         this.context = context;
         this.list = list;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,7 +30,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         // edits
         holder.userhistoryRegNo.setText("Reg_No: "+list.get(position).getReg_No());
         holder.userhistoryDate.setText("Date:"+list.get(position).getDate());
