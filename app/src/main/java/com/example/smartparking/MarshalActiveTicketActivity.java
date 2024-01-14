@@ -77,7 +77,7 @@ public class MarshalActiveTicketActivity extends AppCompatActivity {
 
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
+                    // TODO : Redundant CODE Improve it and shorten it
                     reg_no = dataSnapshot.child("Driver").getValue(String.class);
                     date = dataSnapshot.child("Date").getValue(String.class);
                     time = dataSnapshot.child("Reg_No").getValue(String.class); //there is no time in the ticket node so i'm using reg no instead

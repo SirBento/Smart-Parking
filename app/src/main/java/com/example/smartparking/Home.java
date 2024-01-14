@@ -276,7 +276,7 @@ public class Home extends AppCompatActivity {
                 if(snapshot.exists()){
 
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
+                        // TODO : Redundant CODE Improve it and shorten it
                         date = dataSnapshot.child("Date").getValue(String.class);
                         driver = dataSnapshot.child("Driver").getValue(String.class);
                         duration = dataSnapshot.child("Duration").getValue(String.class);
@@ -320,7 +320,7 @@ public class Home extends AppCompatActivity {
                 if(snapshot.exists()){
 
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-
+ // TODO : Redundant CODE Improve it and shorten it
                         booktname = dataSnapshot.child("Name").getValue(String.class);
                         bookDate= dataSnapshot.child("Date").getValue(String.class);
                         bookDuration = dataSnapshot.child("Duration").getValue(String.class);
